@@ -1,11 +1,12 @@
-import Button from 'react-bootstrap/Button';
 import './Students.css';
+import StudentForm from '../../components/studentForm';
 
 function Students() {
+
 	return (
 		<div className="students-page">
-			<Button variant="primary">Students</Button>
-		</div>
+			<StudentForm />
+		</div >
 	);
 }
 
