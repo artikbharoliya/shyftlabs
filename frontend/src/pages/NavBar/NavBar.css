@@ -1,0 +1,14 @@
+.nav {
+    display: flex;
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: column;
+    flex: 3,
+}
+
+.content {
+    flex: 10;
+    padding: 8px;
+}
