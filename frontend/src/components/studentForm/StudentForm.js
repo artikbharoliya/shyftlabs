@@ -93,7 +93,7 @@ const StudentForm = () => {
                 setSelectedDate(new Date(date));
                 setFormData({ ...formData, dateOfBirth: new Date(date) })
               }}
-              footer={selectedDate && `Selected Date date is: ${getPrintableDate(selectedDate)}`}
+              footer={selectedDate && `Selected date is: ${getPrintableDate(selectedDate)}`}
             />
           }
         </Form.Group>
