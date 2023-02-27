@@ -19,6 +19,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use('/api/students', require('./routes/studentRoutes'));
+app.use('/api/courses', require('./routes/courseRoutes'));
 
 // TODO: make connection to database
 
