@@ -12,7 +12,6 @@ const ResultTable = () => {
   }, [results]);
 
   const renderTableData = (data) => {
-    console.log(data);
     if (Array.isArray(data)) {
       return (
         data.map((item, index) => {
