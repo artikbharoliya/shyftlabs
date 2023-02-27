@@ -1,24 +1,27 @@
 import { useContext, useEffect, useState } from "react";
 import Table from 'react-bootstrap/Table';
-import { CourseContext } from "../../pages/courses/CourseContext";
+import { ResultContext } from "../../pages/Results/ResultContext";
 
 
-const CourseTable = () => {
+const ResultTable = () => {
   const [loading, setLoading] = useState(true);
-  const [courses] = useContext(CourseContext);
+  const [results] = useContext(ResultContext);
 
   useEffect(() => {
-    setLoading(courses ? false : true);
-  }, [courses]);
+    setLoading(results ? false : true);
+  }, [results]);
 
   const renderTableData = (data) => {
+    console.log(data);
     if (Array.isArray(data)) {
       return (
         data.map((item, index) => {
           return (
             <tr key={index}>
               <td>{index + 1}</td>
-              <td>{item.courseName}</td>
+              <td>{item.course.courseName}</td>
+              <td>{item.student.firstName + " " + item.student.lastName}</td>
+              <td>{item.score}</td>
             </tr>
           );
         })
@@ -33,13 +36,15 @@ const CourseTable = () => {
         <tr>
           <th>Number</th>
           <th>Course Name</th>
+          <th>Student Name</th>
+          <th>Score</th>
         </tr>
       </thead>
       <tbody>
-        {renderTableData(courses)}
+        {renderTableData(results)}
       </tbody>
     </Table>
   );
 }
 
-export default CourseTable;
+export default ResultTable;

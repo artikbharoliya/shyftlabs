@@ -1,10 +1,8 @@
-import Button from 'react-bootstrap/Button';
-import './Home.css';
 
 function Home() {
   return (
     <div className="home-page">
-      <Button variant="primary">Home Button</Button>
+      <h3>Hello world!</h3>
     </div>
   );
 }

@@ -5,10 +5,15 @@
 .nav-bar {
     display: flex;
     flex-direction: column;
-    flex: 3,
+    flex: 1;
+    margin: 28px 0;
+}
+
+.nav-bar > a {
+    margin: 12px 0;
 }
 
 .content {
-    flex: 10;
+    flex: 12;
     padding: 8px;
 }
