@@ -60,11 +60,11 @@ This project was built using `NodeJS (v16.13.2)`. Please try running the project
 Version information about any other packages can be found in `package.json` file in respective folders.
 ## Environment Variables
 
-To run this project, you will need to add the following environment variables to your .env file in the /frontend directory.
+To run this project, you will need to add the following environment variables to your .env file in the `/frontend` directory.
 
 `REACT_APP_API_URL_PROD`
 
-In the /backend directory, you will need to add the following environment variables in order to run the app.
+In the `/backend` directory, you will need to add the following environment variables in order to run the app.
 
 `mongodb_uri`
 
