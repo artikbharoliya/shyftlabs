@@ -8,7 +8,7 @@ import { CourseContext } from '../../pages/courses/CourseContext';
 
 const api_url = process.env.REACT_APP_API_URL_PROD + '/results';
 const ResultForm = () => {
-  const [results, setResults] = useContext(ResultContext);
+  const [setResults] = useContext(ResultContext);
   const [students] = useContext(StudentContext);
   const [courses] = useContext(CourseContext);
   const [error, setError] = useState(null);

@@ -4,9 +4,11 @@ export const CourseContext = createContext({});
 
 const api_url = process.env.REACT_APP_API_URL_PROD + '/courses';
 
+// Context for storing courses data.
 const CourseContextProvider = (props) => {
   const [courses, setCourses] = useState({});
 
+  // fetching the data to initialize the context.
   const fetchCourses = async () => {
     fetch(api_url)
       .then((response) => (response.json()))

@@ -1,11 +1,7 @@
-import ResultContextProvider from './ResultContext';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import './Results.css';
 import ResultTable from '../../components/resultTable';
 import ResultForm from '../../components/resultForm';
-import StudentContextProvider from '../Students/StudentContext';
-import CourseContextProvider from '../courses/CourseContext';
 
 function Results() {
   return (
