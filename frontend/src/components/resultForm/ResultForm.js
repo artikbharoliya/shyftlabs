@@ -8,7 +8,8 @@ import { CourseContext } from '../../pages/courses/CourseContext';
 
 const api_url = process.env.REACT_APP_API_URL_PROD + '/results';
 const ResultForm = () => {
-  const [setResults] = useContext(ResultContext);
+  // eslint-disable-next-line
+  const [results, setResults] = useContext(ResultContext);
   const [students] = useContext(StudentContext);
   const [courses] = useContext(CourseContext);
   const [error, setError] = useState(null);
@@ -20,7 +21,6 @@ const ResultForm = () => {
   });
 
   const verifyData = (data) => {
-    console.log(data)
     if (!data["studentName"]) {
       return ("Please provide student name. student name cannot be empty");
     } else if (!data["courseName"]) {
@@ -49,6 +49,7 @@ const ResultForm = () => {
         })
       }).then(response => response.json())
         .then((data) => {
+          console.log(data);
           setSuccess('Data added successfully');
           setResults(data);
           setFormData({
