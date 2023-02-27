@@ -1,0 +1,19 @@
+version: '1'
+
+services:
+  backend:
+    env_file:
+        "./server/.env"
+    build:
+      context: ./server
+      dockerfile: ./Dockerfile
+    image: "artik/shyftlabs-backend"
+    ports:
+      - "3001:3001"
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: ./Dockerfile
+    image: "artik/shyftlabs-frontend"
+    ports:
+      - "3000:3000"
