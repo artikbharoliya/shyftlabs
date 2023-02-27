@@ -1,8 +1,6 @@
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import './Courses.css';
 import CourseForm from '../../components/courseForm';
-import CourseContextProvider from './CourseContext';
 import CourseTable from '../../components/courseTable';
 
 function Courses() {

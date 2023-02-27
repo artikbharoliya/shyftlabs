@@ -11,7 +11,7 @@ const StudentTable = () => {
 
   useEffect(() => {
     setLoading(students ? false : true);
-  }, [setLoading]);
+  }, [students]);
 
   const renderTableData = (data) => {
     if (Array.isArray(data)) {
