@@ -69,7 +69,7 @@ const StudentForm = () => {
       <h1 className='mb-4'>Add student data</h1>
       <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-3" controlId="firstName">
-          <Form.Label>First Name: {formData.firstName}</Form.Label>
+          <Form.Label>First Name:</Form.Label>
           <Form.Control type="text" placeholder="John" value={formData.firstName}
             onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
           />
