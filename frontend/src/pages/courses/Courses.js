@@ -1,12 +1,23 @@
-import Button from 'react-bootstrap/Button';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import './Courses.css';
+import CourseForm from '../../components/courseForm/CourseForm';
+import CourseContextProvider from './CourseContext';
+import CourseTable from '../../components/courseTable';
 
 function Courses() {
-    return (
-        <div className="courses-page">
-            <Button variant="primary">Courses</Button>
-        </div>
-    );
+  return (
+    <CourseContextProvider>
+      <div className="courses-page">
+        <Row className="justify-content-md-center me-0">
+          <Col md={6} xs={8}>
+            <CourseForm />
+            <CourseTable />
+          </Col>
+        </Row>
+      </div>
+    </CourseContextProvider>
+  );
 }
 
 export default Courses;
