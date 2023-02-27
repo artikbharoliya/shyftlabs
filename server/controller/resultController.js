@@ -23,7 +23,9 @@ exports.createResult = async (req, res) => {
       });
 
       newResult.save()
-        .then(data => res.json(data))
+        .then(() => {
+          res.redirect('/api/results');
+        })
         .catch(err => {
           console.log(err);
           res.status(500).json({ error: "Cannot create a result record in database" });

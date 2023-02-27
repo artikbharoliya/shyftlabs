@@ -4,24 +4,14 @@ import Table from 'react-bootstrap/Table';
 import { getPrintableDate } from "../../utils/Utils";
 
 
-const api_url = process.env.REACT_APP_API_URL_PROD + '/students';
 
 const StudentTable = () => {
   const [loading, setLoading] = useState(true);
-  const [students, setStudents] = useContext(StudentContext);
+  const [students] = useContext(StudentContext);
 
-  const fetchStudents = async () => {
-    fetch(api_url)
-      .then((response) => (response.json()))
-      .then((studentsData) => {
-        setStudents(studentsData);
-        setLoading(false);
-      })
-      .catch((error) => console.log(error));
-  }
   useEffect(() => {
-    fetchStudents();
-  }, []);
+    setLoading(students ? false : true);
+  }, [setLoading]);
 
   const renderTableData = (data) => {
     if (Array.isArray(data)) {
