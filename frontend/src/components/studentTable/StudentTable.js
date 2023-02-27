@@ -21,7 +21,6 @@ const StudentTable = () => {
   }
   useEffect(() => {
     fetchStudents();
-    console.log(students);
   }, []);
 
   const renderTableData = (data) => {

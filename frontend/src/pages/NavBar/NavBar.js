@@ -6,10 +6,10 @@ function NavBar({ children }) {
   return (
     <div className="nav">
       <Nav className="nav-bar mx-4">
-        <Nav.Link><Link to={'/'}>Home</Link></Nav.Link>
-        <Nav.Link><Link to={'/students'}>Students</Link></Nav.Link>
-        <Nav.Link><Link to={'/courses'}>Courses</Link></Nav.Link>
-        <Nav.Link><Link to={'/results'}>Results</Link></Nav.Link>
+        <Link to={'/'}>Home</Link>
+        <Link to={'/students'}>Students</Link>
+        <Link to={'/courses'}>Courses</Link>
+        <Link to={'/results'}>Results</Link>
       </Nav>
       <div className="content">
         {children}

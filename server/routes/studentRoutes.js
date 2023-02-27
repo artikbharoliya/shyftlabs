@@ -8,8 +8,4 @@ routerStudent.post("/", controller.createStudent);
 
 routerStudent.get("/", controller.getAllStudents);
 
-routerStudent.put("/", controller.updateStudent);
-
-routerStudent.delete("/", controller.deleteStudent);
-
 module.exports = routerStudent;
