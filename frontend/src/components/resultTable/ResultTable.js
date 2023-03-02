@@ -15,6 +15,7 @@ const ResultTable = () => {
     if (Array.isArray(data)) {
       return (
         data.map((item, index) => {
+          if (!item.student || !item.course) return
           return (
             <tr key={index}>
               <td>{index + 1}</td>

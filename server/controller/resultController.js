@@ -38,7 +38,11 @@ exports.getAllResults = (req, res) => {
   resultModel.find()
     .populate({ path: 'course' })
     .populate({ path: 'student' })
-    .then(data => res.json(data))
+    .then(data => {
+      const validResults = data.filter((result) => (result.student && result.course));
+      console.log(validResults)
+      res.json(validResults);
+    })
     .catch(err => {
       console.log(err);
       res.status(500).json({ error: 'Could not fetch results from the database' });
